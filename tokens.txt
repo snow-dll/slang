@@ -1,0 +1,7 @@
++ PLS
+- MIN
+/ DIV
+* MUL
+( LPAR
+) RPAR
+% MOD
