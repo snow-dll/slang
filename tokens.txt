@@ -5,3 +5,4 @@
 ( LPAR
 ) RPAR
 % MOD
+. DOT
