@@ -1,7 +1,7 @@
-import slang.interpreter
+import interpreter
 ## shell.py
 
 # just for testing, will overhaul later
 while True:
     raw = input('$ ')
-    print(slang.interpreter.slang(raw))
+    print(interpreter.slang(raw))

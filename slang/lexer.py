@@ -4,6 +4,6 @@ class Lexer:
     def __init__(self, inp) -> None:
         self.inp = inp
     
-    def lparserOut(self):
+    def lexerOut(self):
         #to be modified
         return self.inp
