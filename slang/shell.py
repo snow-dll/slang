@@ -6,7 +6,7 @@ import interpreter
 #     raw = input('$ ')
 #     print(interpreter.slang(raw))
 
-with open('testfile.sl', 'r') as f:
+with open('testfile.slg', 'r') as f:
     rf = f.read()
 
 print(interpreter.slang(rf))
