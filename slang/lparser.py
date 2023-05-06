@@ -37,11 +37,12 @@ class LParser:
         if self.flag == 'e':
             return [self.inp, self.flag]
         
-        if 'NEWL' in self.inp:
-            outputs = []
-            lines = self.inp.split('NEWL')
-        else:
-            lines = [self.inp]
+        # if 'NEWL' in self.inp:
+        #     outputs = []
+        #     lines = self.inp.split('NEWL')
+        # else:
+        #     lines = [self.inp]
+        return [self.inp, self.flag]
     
     def parserForth(self, lines):
         # lineCount = 0
@@ -62,7 +63,7 @@ class LParser:
         #             if (tkn == 'PLS' or tkn == 'MIN') and parCount == 0:
         #                 didSplit = True
 
-        pass
+
                         
             
 
