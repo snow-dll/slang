@@ -1,5 +1,12 @@
 import lexer
 
+class PError:
+    def __init__(self, message, ln) -> None:
+        self.message = message
+        self.ln = ln
+        self.error = f'\nFatal: Error in Parser at line {self.pos.ln}\
+: {self.message}\n'
+
 class LangTree:
     def __init__(self, head) -> None:
         self.head = head
@@ -37,10 +44,27 @@ class LParser:
             lines = [self.inp]
     
     def parserForth(self, lines):
-        linecount = 0
-        for line in lines:
-            linecount += 1
-            pass
+        # lineCount = 0
+        # for line in lines:
+        #     parCount = 0
+        #     lineCount += 1
+
+        #     currentNode = None
+        #     while True:
+        #         if len(line) == 1:
+        #             break
+        #         if line[1] == 'LPAR' and line[-1] == 'RPAR':
+        #             line = line[1:-1]
+        #         didSplit = False
+        #         for tkn in line:
+        #             if tkn == 'LPAR': parCount += 1
+        #             if tkn == 'RPAR': parCount -= 1
+        #             if (tkn == 'PLS' or tkn == 'MIN') and parCount == 0:
+        #                 didSplit = True
+
+        pass
+                        
+            
 
 
         return [self.inp, self.flag]
