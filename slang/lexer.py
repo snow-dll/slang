@@ -5,6 +5,13 @@ class LError:
         self.error = f'\nFatal: Error in Lexer at line {self.pos.ln} \
 and column {self.pos.col}: {self.message}\n'
 
+class LWarning:
+    def __init__(self, message, pos) -> None:
+        self.message = message
+        self.pos = pos
+        self.error = f'\nCaution: Warning in Lexer at line {self.pos.ln} \
+and column {self.pos.col}: {self.message}\n' 
+
 class Position:
     def __init__(self) -> None:
         self.ln = 1
@@ -57,7 +64,10 @@ class Lexer:
         while self.cc != None:
             if self.cc not in '0123456789.':
                 break
-            num += self.cc
+            if self.cc == '.' and isFloat:
+                pass
+            else:
+                num += self.cc
             if self.cc == '.':
                 isFloat = True
             self.advance()
